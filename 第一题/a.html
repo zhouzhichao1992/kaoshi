@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/banner.css">
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <ul id="box">
+            <li class="active">
+                <div class="top">
+                    <h2 class="hhh">必抢清单</h2>
+                    <a href="#" class="aaa">
+                        更多
+                        <div class="quan">></div>
+                    </a>
+                </div>
+                <img src="../考试文件/img/11.jpg" alt="" class="tu" />
+                <div class="nav">
+                    <h3 class="h3333">
+                        奔跑在绿茵场，防滑球鞋脚上穿
+                    </h3>
+                    <i class="nnn">
+                        不少什么什么什么就发款卡都圾回复卡时的间段划分
+                        sad浩丰科技阿萨德回复框架撒画大第三方看看撒交电话费...
+                    </i>
+                </div>
+                <div class="mini">
+                    <img src="../考试文件/img/8.jpg" alt="">
+                    <img src="../考试文件/img/6.jpg" alt="">
+                    <img src="../考试文件/img/7.jpg" alt="" class="mimi">
+                </div>
+            </li>
+            <li class="active">
+                <div class="top">
+                    <h2 class="hhh">必抢清单</h2>
+                    <a href="#" class="aaa">
+                        更多
+                        <div class="quan">></div>
+                    </a>
+                </div>
+                <img src="../考试文件/img/12.jpg" alt="" class="tu" />
+                <div class="nav">
+                    <h3 class="h3333">
+                        奔跑在绿茵场，防滑球鞋脚上穿
+                    </h3>
+                    <i class="nnn">
+                        不少什么什么什么就发款卡都圾回复卡时的间段划分
+                        sad浩丰科技阿萨德回复框架撒画大第三方看看撒交电话费...
+                    </i>
+                </div>
+                <div class="mini">
+                    <img src="../考试文件/img/4.jpg" alt="">
+                    <img src="../考试文件/img/5.jpg" alt="">
+                    <img src="../考试文件/img/3.jpg" alt="" class="mimi">
+                </div>
+            </li>
+            <li class="active">
+                <div class="top">
+                    <h2 class="hhh">必抢清单</h2>
+                    <a href="#" class="aaa">
+                        更多
+                        <div class="quan">></div>
+                    </a>
+                </div>
+                <img src="../考试文件/img/1.jpg" alt="" class="tu" />
+                <div class="nav">
+                    <h3 class="h3333">
+                        奔跑在绿茵场，防滑球鞋脚上穿
+                    </h3>
+                    <i class="nnn">
+                        不少什么什么什么就发款卡都圾回复卡时的间段划分
+                        sad浩丰科技阿萨德回复框架撒画大第三方看看撒交电话费...
+                    </i>
+                </div>
+                <div class="mini">
+                    <img src="../考试文件/img/2.jpg" alt="">
+                    <img src="../考试文件/img/111.jpg" alt="">
+                    <img src="../考试文件/img/9.jpg" alt="" class="mimi">
+                </div>
+            </li>
+
+        </ul>
+        <ol id="uu">
+            <li class="current"></li>
+            <li></li>
+            <li></li>
+        </ol>
+        <a href="javascript:;" class="left-btn">
+            <img src="img/left1.png" alt="" srcset="" class="a">
+        </a>
+        <a href="javascript:;" class="right-btn">
+            <img src="img/right1.png" alt="" srcset="" class="a">
+        </a>
+    </div>
+    <script src="js/move.0.4.0.js"></script>
+    <script type="text/javascript">
+        var swiper = (function () {
+            var $tipBox = document.querySelector('#uu');
+            var $tipAll = $tipBox.children;
+            var $imgAll = document.querySelectorAll('#box li');
+            var $showImageBox = document.querySelector('#box');
+            var width = document.querySelector('.wrapper').clientWidth;
+            var timer = null;
+            var index = 0;
+            var $prevBtn = document.querySelector('.left-btn');
+            var $nextBtn = document.querySelector('.right-btn');
+            var $prevBtn2 = document.querySelector('.a2');
+            var $nextBtn3 = document.querySelector('.a3');
+            var $wrapper = document.querySelector('.wrapper')
+            for (let i = 0; i < $tipAll.length; i++) {
+                $tipAll[i].index = i;
+            }
+            return {
+                init() {
+                    this.event();
+                    this.autoPlay();
+                },
+                event() {
+                    const self = this;
+                    $tipBox.addEventListener('click', function (e) {
+                        e = e || window.event;
+                        var target = e.target || e.srcElement;
+                        if (target.nodeName === 'LI') {
+                            index = target.index;
+                            self.showImage();
+                        }
+                    }, false)
+                    $prevBtn.onclick = function () {
+                        index--;
+                        self.showImage()
+                    }
+                    $nextBtn.onclick = function () {
+                        index++;
+                        self.showImage()
+                    }
+                    $wrapper.onmouseenter = function () {
+                        $prevBtn.style.display = 'block';
+                        $nextBtn.style.display = 'block';
+                    }
+                    // $wrapper.onmouseleave = function () {
+                    //     $prevBtn.style.display = 'none';
+                    //     $nextBtn.style.display = 'none';
+                    // }
+                    // $prevBtn.onmouseenter = function () {
+                    //     $prevBtn2.style.display = 'block';
+                    //     $nextBtn3.style.display = 'block';
+                    // }
+                    // $prevBtn.onmouseleave = function () {
+                    //     $prevBtn2.style.display = 'none';
+                    //     $nextBtn3.style.display = 'none';
+                    // }
+                    // $nextBtn.onmouseenter = function () {
+                    //     $prevBtn2.style.display = 'block';
+                    //     $nextBtn3.style.display = 'block';
+                    // }
+                    // $nextBtn.onmouseleave = function () {
+                    //     $prevBtn2.style.display = 'none';
+                    //     $nextBtn3.style.display = 'none';
+                    // }
+                },
+                showImage() {
+                    if (index < 0) {
+                        index = $tipAll.length - 1;
+                    } else if (index > $tipAll.length - 1) {
+                        index = 0
+                    }
+                    for (let i = 0; i < $tipAll.length; i++) {
+                        $tipAll[i].classList.remove('current');
+                    }
+                    $tipAll[index].classList.add('current');
+                    move($showImageBox, 'left', index * -width, 500);
+
+                },
+                // autoPlay() {
+                //     var self = this;
+                //     clearInterval(timer);
+                //     timer = setInterval(function () {
+                //         index++;
+                //         self.showImage();
+                //     }, 2000)
+                // }
+            }
+        }())
+        swiper.init();
+    </script>
+</body>
+
+</html>

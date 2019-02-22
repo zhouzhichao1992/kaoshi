@@ -1,0 +1,161 @@
+
+body{
+    background: #d8d8d8;
+}
+ul,ol {
+    list-style: none;
+}
+
+.wrapper {
+    width: 390px;
+    height: 441px;
+    margin: 100px auto;
+    overflow: hidden;
+    position: relative;
+    border-top: 7px solid #f2f2f2;
+    border-right: 7px solid #f2f2f2;
+}
+.top{
+    height: 60px;
+    width: 390px;
+}
+.hhh{
+    border-left: 5px solid #69a88f;
+    padding-left: 16px;
+    color:#69a88f;
+    font-size: 18px;
+    height: 20px;
+    line-height: 20px;
+    float: left;
+    margin-top:12px; 
+}
+.aaa{
+    float: right;
+    width: 55px;
+    color: #999999;
+    font-size: 12px;
+    margin-top:15px; 
+}
+.quan{
+    float: right;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #999999;
+    border-radius: 7px;
+    line-height: 15px;
+    text-align: center;
+    margin-right: 10px;
+}
+ul {
+    position: relative;
+    width: 9999px;
+    height: 441px;
+    background: #ffffff;
+}
+
+ul li {
+    float: left;
+}
+.tu {
+    width: 350px;
+    height: 150px;
+    padding-left:20px;
+
+}
+.nav{
+    height: 84px;
+    width: 390px;
+
+}
+.h3333{
+    margin: 0;
+    padding: 0;
+    color: #222222;
+    font-size: 18px;
+    width: 390px;
+    text-align: center;
+    height: 46px;
+    line-height: 46px;
+}
+.nnn{
+    display: block;
+    width: 350px;
+    margin-left: 20px;
+    color: #999999;
+    font-size: 14px;
+}
+.mini{
+    height: 100px;
+    width: 350px;
+    margin-left: 20px;
+
+}
+.mini img{
+    width: 100px;
+    margin-right: 10px;
+}
+.mimi{
+    margin: 0;
+}
+ol {
+    position: absolute;
+    right: 88px;
+    bottom: 20px;
+    width: 150px;
+}
+
+ol li {
+    float: left;
+    width: 10px;
+    height: 6px;
+    margin: 0 5px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: default;
+    background-color: #d8d8d8;
+}
+
+ul li.active {
+    display: block;
+}
+
+ol li.current {
+    background-color: #69a88f;
+    color: #d8d8d8;
+}
+.left-btn, .right-btn {
+    position: absolute;
+    top: 50%;
+    margin-top: -23px;
+    width: 24px;
+    height: 60px;
+    background: #cccccc;
+
+}
+.left-btn img {
+    margin-top: 10px;
+}
+.right-btn img {
+    margin-top: 10px;
+}
+.left-btn {
+    left: 0;
+}
+.right-btn {
+    right: 0;
+}
+/* .left-btn, .right-btn {
+    display:none;
+} */
+.a2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.a3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
